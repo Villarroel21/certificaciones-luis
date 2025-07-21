@@ -2,36 +2,86 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Certificaciones - Luis Villarroel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificados - Luis Villarroel</title>
   <style>
-    body {
-      font-family: sans-serif;
-      background: #f4f4f4;
-      text-align: center;
-      padding: 50px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    h1 {
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
       color: #333;
     }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 15px 25px;
-      background-color: #007acc;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 16px;
+    .header {
+      background-color: #edc16c;
+      padding: 60px 20px 100px;
+      text-align: center;
+      position: relative;
+      border-bottom-left-radius: 100% 50px;
+      border-bottom-right-radius: 100% 50px;
     }
-    .btn:hover {
-      background-color: #005f99;
+    .header h1 {
+      font-size: 1.2rem;
+      color: #333;
+      letter-spacing: 2px;
+    }
+    .header h2 {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #000;
+      margin-top: 10px;
+    }
+    .container {
+      max-width: 800px;
+      margin: -80px auto 40px;
+      padding: 20px;
+      text-align: center;
+    }
+    .pdf-preview {
+      width: 100%;
+      max-width: 600px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      border-radius: 12px;
+      margin: 0 auto 60px;
+    }
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .button {
+      background-color: #333;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .button:hover {
+      background-color: #000;
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
-  <h1>Certificaciones de Luis Villarroel</h1>
-  <p>Puedes ver o descargar el archivo en el siguiente botón:</p>
-  <a class="btn" href="certificaciones.pdf" target="_blank">📄 Ver PDF</a>
+  <div class="header">
+    <h1>LUIS VILLARROEL</h1>
+    <h2>CERTIFICADOS</h2>
+  </div>
+
+  <div class="container">
+    <img class="pdf-preview" src="2b69c1fc-ac9d-4cd0-999e-62ef345de8c0.png" alt="Vista previa del PDF">
+    <div class="button-group">
+      <a class="button" href="certificaciones.pdf" target="_blank"> Ver PDF</a>
+      <a class="button" href="certificaciones.pdf" download> Descargar PDF</a>
+    </div>
+  </div>
 </body>
 </html>
