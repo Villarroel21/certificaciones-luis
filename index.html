@@ -1,87 +1,127 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Certificados - Luis Villarroel</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio | Certificaciones</title>
+  <meta name="description" content="Acceso a mi PDF de certificaciones y a mi perfil de Credly." />
+  <meta name="color-scheme" content="dark light" />
+
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root{
+      --txt:#ffffff;
+      --muted:#d1d5db;
+      --accent:#FFB800;  /* amarillo */
+      --accent-2:#2b2b2b; /* gris oscuro */
+      --radius:18px;
+      --shadow: 0 12px 40px rgba(0,0,0,.6);
     }
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #333;
+
+    *{box-sizing:border-box; margin:0; padding:0;}
+    html,body{height:100%; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;}
+
+    /* ===== Fondo con tu foto ===== */
+    body{
+      background: url("assets/Foto de fondo.png") no-repeat center center fixed;
+      background-size: cover;
+      color:var(--txt);
+      display:flex; align-items:center; justify-content:center;
+      padding:20px;
     }
-    .header {
-      background-color: #edc16c;
-      padding: 60px 20px 100px;
-      text-align: center;
-      position: relative;
-      border-bottom-left-radius: 100% 50px;
-      border-bottom-right-radius: 100% 50px;
+
+    .overlay{
+      background: rgba(0,0,0,0.65); /* capa oscura para contraste */
+      border-radius:20px;
+      padding:40px 28px;
+      max-width: 780px;
+      width:100%;
+      box-shadow: var(--shadow);
     }
-    .header h1 {
-      font-size: 1.2rem;
-      color: #333;
-      letter-spacing: 2px;
+
+    h1{
+      font-size: clamp(26px, 5vw, 42px);
+      margin-bottom:6px;
     }
-    .header h2 {
-      font-size: 2.2rem;
-      font-weight: bold;
-      color: #000;
-      margin-top: 10px;
+    p.lead{
+      font-size: clamp(14px, 2.5vw, 18px);
+      color:var(--muted);
+      margin-bottom:24px;
     }
-    .container {
-      max-width: 800px;
-      margin: -80px auto 40px;
-      padding: 20px;
-      text-align: center;
+
+    .btns{
+      display:grid; grid-template-columns: 1fr 1fr; gap:14px; margin-bottom:22px;
     }
-    .pdf-preview {
-      width: 100%;
-      max-width: 600px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      border-radius: 12px;
-      margin: 0 auto 60px;
+    @media(max-width:560px){ .btns{ grid-template-columns: 1fr; } }
+
+    .btn{
+      display:flex; align-items:center; justify-content:center; gap:10px;
+      padding:16px; border-radius:14px; font-weight:700;
+      text-decoration:none; transition:.2s;
+      box-shadow: 0 8px 22px rgba(0,0,0,.35);
     }
-    .button-group {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 20px;
+    .btn svg{width:20px; height:20px;}
+
+    .btn.primary{ background:var(--accent); color:#111; }
+    .btn.primary:hover{ filter:brightness(1.1); transform:translateY(-2px); }
+
+    .btn.secondary{ background:#3b2f57; color:#fff; }
+    .btn.secondary:hover{ filter:brightness(1.2); transform:translateY(-2px); }
+
+    .stack{ display:grid; grid-template-columns: repeat(4,1fr); gap:10px; }
+    @media(max-width:680px){ .stack{ grid-template-columns: repeat(2,1fr); } }
+    @media(max-width:400px){ .stack{ grid-template-columns: 1fr; } }
+
+    .chip{
+      display:flex; align-items:center; gap:8px;
+      background: rgba(255,255,255,.1);
+      border:1px solid rgba(255,255,255,.25);
+      border-radius:12px; padding:8px 10px;
+      font-size:14px; font-weight:600;
     }
-    .button {
-      background-color: #333;
-      color: white;
-      padding: 15px 30px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 16px;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .button:hover {
-      background-color: #000;
-      transform: scale(1.05);
-    }
+    .chip svg{ width:16px; height:16px; }
+
+    footer{ text-align:center; margin-top:24px; font-size:12px; color:var(--muted); }
   </style>
 </head>
 <body>
-  <div class="header">
-    <h1>LUIS VILLARROEL</h1>
-    <h2>CERTIFICADOS</h2>
-  </div>
+  <main class="overlay">
+    <h1>Luis Villarroel</h1>
+    <p class="lead">Ingeniero en conectividad y redes · Accede a mi PDF de certificaciones y a mi perfil de Credly</p>
 
-  <div class="container">
-    <img class="pdf-preview" src="2b69c1fc-ac9d-4cd0-999e-62ef345de8c0.png" alt="Vista previa del PDF">
-    <div class="button-group">
-      <a class="button" href="CERTIFICADO (MÓDULO).pdf" target="_blank"> Ver PDF</a>
-      <a class="button" href="CERTIFICADO (MÓDULO).pdf" download> Descargar PDF</a>
+    <div class="btns">
+      <a class="btn primary" href="assets/certificaciones.pdf" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M7 3h6l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M13 3v5h5" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M8 14h8M8 17h6" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+        Certificaciones (PDF)
+      </a>
+
+      <a class="btn secondary" href="https://www.credly.com/users/TU-USUARIO/badges" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="8" r="5.2" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M8 14l-2.5 6L12 17l6.5 3L16 14" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        </svg>
+        Otros cursos (Credly)
+      </a>
     </div>
-  </div>
+
+    <div class="stack">
+      <div class="chip"><svg viewBox="0 0 24 24"><path d="M12 3v6M12 15v6M5 9h14M5 15h14" stroke="currentColor" stroke-width="1.5"/></svg>Redes</div>
+      <div class="chip"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.5 9-7 10-3.5-1-7-5-7-10V6l7-3Z" stroke="currentColor" stroke-width="1.5"/></svg>Seguridad</div>
+      <div class="chip"><svg viewBox="0 0 24 24"><path d="M7 7h10v10H7z" stroke="currentColor" stroke-width="1.5"/></svg>Automatización</div>
+      <div class="chip"><svg viewBox="0 0 24 24"><path d="M7 16h9a3 3 0 0 0 0-6 4.5 4.5 0 0 0-8.7-1.2A3.5 3.5 0 0 0 7 16Z" stroke="currentColor" stroke-width="1.5"/></svg>Cloud</div>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Luis Villarroel · Hecho con GitHub Pages.
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
