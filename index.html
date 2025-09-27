@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portafolio | Certificaciones</title>
-  <meta name="description" content="Acceso a mi PDF de certificaciones y a mi perfil de Credly." />
+  <meta name="description" content="Acceso a mi PDF de certificaciones, a mi currículum y a mi perfil de Credly." />
   <meta name="color-scheme" content="dark light" />
 
   <style>
@@ -49,9 +49,9 @@
     }
 
     .btns{
-      display:grid; grid-template-columns: 1fr 1fr; gap:14px; margin-bottom:22px;
+      display:grid; grid-template-columns: 1fr 1fr 1fr; gap:14px; margin-bottom:22px;
     }
-    @media(max-width:560px){ .btns{ grid-template-columns: 1fr; } }
+    @media(max-width:700px){ .btns{ grid-template-columns: 1fr; } }
 
     .btn{
       display:flex; align-items:center; justify-content:center; gap:10px;
@@ -86,9 +86,10 @@
 <body>
   <main class="overlay">
     <h1>Luis Villarroel</h1>
-    <p class="lead">Ingeniero en conectividad y redes · Accede a mi PDF de certificaciones y a mi perfil de Credly</p>
+    <p class="lead">Ingeniero en conectividad y redes · Accede a mi PDF de certificaciones, a mi currículum y a mi perfil de Credly</p>
 
     <div class="btns">
+      <!-- Certificaciones -->
       <a class="btn primary" href="CERTIFICADO%20%28M%C3%93DULO%29.pdf" target="_blank">
         <svg viewBox="0 0 24 24" fill="none">
           <path d="M7 3h6l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="1.6"/>
@@ -98,12 +99,22 @@
         Certificaciones (PDF)
       </a>
 
+      <!-- Credly -->
       <a class="btn secondary" href="https://www.credly.com/users/luis-felipe-villarroel-olave" target="_blank">
         <svg viewBox="0 0 24 24" fill="none">
           <circle cx="12" cy="8" r="5.2" stroke="currentColor" stroke-width="1.6"/>
           <path d="M8 14l-2.5 6L12 17l6.5 3L16 14" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
         </svg>
         Otros cursos (Credly)
+      </a>
+
+      <!-- Currículum -->
+      <a class="btn secondary" href="Luis_Villarroel_CV.pdf" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M6 4h12v16H6z" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M9 8h6M9 12h6M9 16h3" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+        Currículum (PDF)
       </a>
     </div>
 
@@ -124,6 +135,3 @@
   </script>
 </body>
 </html>
-
-
-
